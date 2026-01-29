@@ -83,5 +83,6 @@ class TestStore:
         with allure.step("Проверка статуса ответа и валидация формата ответа"):
             assert response.status_code == 200, "Код ответа не совпал с ожидаемым "
             jsonschema.validate(response_json, STORE_SCHEMA)
+            assert isinstance(response_json, dict)
 
 
