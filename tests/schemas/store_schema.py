@@ -10,3 +10,4 @@ STORE_SCHEMA = {
     },
     "required": ["approved"]
 }
+

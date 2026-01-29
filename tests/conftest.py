@@ -28,3 +28,4 @@ def create_order():
     response = requests.post(url=f"{BASE_URL}/store/order", json=payload)
     assert response.status_code == 200
     return response.json()
+
