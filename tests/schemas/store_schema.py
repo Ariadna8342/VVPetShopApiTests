@@ -1,4 +1,4 @@
-STORE_SCHEMA = {
+INVENTORY_SCHEMA = {
     "type": "object",
     "properties":{
         "approved": {
@@ -6,8 +6,32 @@ STORE_SCHEMA = {
         },
         "delivered": {
             "type": "integer"
+        },
+        "status": {
+            "type": "string"
         }
     },
     "required": ["approved"]
 }
 
+STORE_SCHEMA = {
+    "type": "object",
+    "properties":{
+        "id": {
+            "type": "integer"
+        },
+        "petId": {
+            "type": "integer"
+        },
+        "quantity": {
+
+        },
+        "status": {
+            "type": "string"
+        },
+        "complete": {
+            "type": "boolean"
+        }
+    },
+    "required": ["id", "petId", "quantity", "status"]
+}
