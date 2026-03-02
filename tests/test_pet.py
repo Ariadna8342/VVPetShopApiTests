@@ -127,9 +127,9 @@ class TestPet:
 
         with allure.step("Проверка статуса ответа и данных питомца"):
             assert response.status_code == 200
-            assert response.json()["id"] == pet_id
-            assert response.json()["name"] == "Buddy Updated"
-            assert response.json()["status"] == "sold"
+            assert response.json()["id"] == payload["id"], "id питомца не совпал с ожидаемым"
+            assert response.json()["name"] == payload["name"], "name питомца не совпало с ожидаемым"
+            assert response.json()["status"] == payload["status"], "status не совпал с ожидаемым"
 
     @allure.title("Удаление питомца по ID")
     def test_delete_pet_by_id(self, create_pet):
